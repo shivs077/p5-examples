@@ -1,8 +1,8 @@
-#This will contain p5js examples
+# This will contain p5js examples
 
-###How to run the codes here?
+### How to run the codes here?
 
-####To run any of the codes given here, follow the steps : 
+#### To run any of the codes given here, follow the steps : 
 
 * Open the example that you want to run.
 
