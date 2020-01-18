@@ -1,3 +1,4 @@
+<<<<<<< HEAd
 let xSpeed = 5;
 let ySpeed = -3;
 let xPos;
@@ -14,10 +15,18 @@ function setup(){
 function windowResized(){
     resizeCanvas(windowWidth,windowHeight);
 }
+=======
+function setup(){
+    createCanvas(600,400);
+    angleMode(DEGREES);
+    //scale(10);
+}
+>>>>>>> 6b4ff8f01627426bfefe531cf6a259c3b1d7b40a
 let n = 6;
 let d = 71;
 function draw(){
     background(0);
+<<<<<<< HEAD
     xPos+=xSpeed;
     yPos+=ySpeed;
     if(xPos>=width || xPos<=0){
@@ -37,12 +46,22 @@ function draw(){
     for(let a = 0;a<361;a++){
         
         let r = rTemp*sin(n*a*d); //radius of the circle
+=======
+    translate(width/2,height/2);
+    stroke(255);
+    noFill();
+    beginShape();
+    for(let a = 0;a<361;a++){
+        
+        let r = 150*sin(n*a*d); //radius of the circle
+>>>>>>> 6b4ff8f01627426bfefe531cf6a259c3b1d7b40a
         let x = r*cos(d*a);
         let y = r*sin(d*a);
         vertex(x,y);
     }
     endShape(CLOSE);
 }
+<<<<<<< HEAD
 
 // function bounceShape(){
 //     if(xPos>=width || xPos<=0){
@@ -57,3 +76,5 @@ function draw(){
 //     xPos+=xSpeed;
 //     yPos+=ySPeed;
 // }
+=======
+>>>>>>> 6b4ff8f01627426bfefe531cf6a259c3b1d7b40a
