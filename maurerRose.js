@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <<<<<<< HEAd
+=======
+<<<<<<< HEAD
+>>>>>>> f2c77b9cfdd9866fa773c136188c0dfaa2cc31f7
 let xSpeed = 5;
 let ySpeed = -3;
 let xPos;
