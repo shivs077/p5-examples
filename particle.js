@@ -4,7 +4,7 @@ class Particle {
     this.y = random(0,height);
     this.r = 1;
     this.xSpeed = random(-2,2);
-    this.ySpeed = random(-2,2);
+    this.ySpeed = random(-1.,1.5);
   }
 
   createParticle() {
