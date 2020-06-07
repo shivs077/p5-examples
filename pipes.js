@@ -26,7 +26,7 @@ function setup() {
   for (let i = 0; i <= 500; i++) {
     b = new Ball(
       random(10, 15),
-      color(random(75, 255), random(75, 255), random(75, 255))
+      color(random(0, 255), random(0, 255), random(0, 255))
     );
     balls.push(b);
   }
