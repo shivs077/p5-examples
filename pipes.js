@@ -1,14 +1,9 @@
 class Ball {
-  let radius;
-  let col;
-  let position;
-  let velocity;
-
-  Ball(radius, col) {
+  constructor(radius, col) {
     this.radius = radius;
     this.col = col;
-    this.position = new createVector(100,100);
-    this.velocity = new createVector(2,2);
+    this.position = new createVector(width / 2, height / 2);
+    this.velocity = new createVector(random(-6, 6), random(-6, 6));
   }
 
   createBall() {
@@ -16,15 +11,30 @@ class Ball {
     fill(this.col);
     circle(this.position.x, this.position.y, this.radius);
   }
-}
+  moveBall() {
+    this.position.add(this.velocity);
+    if (this.position.x <= 0 || this.position.x >= width) this.velocity.x *= -1;
 
-Ball b;
+    if (this.position.y <= 0 || this.position.y >= height)
+      this.velocity.y *= -1;
+  }
+}
+let balls = [];
 function setup() {
-  createCanvas(400,400);
-  background(0);
-  b = new Ball(30, color(255));
+  createCanvas(windowWidth, windowHeight);
+  background("#666");
+  for (let i = 0; i <= 500; i++) {
+    b = new Ball(
+      random(10, 15),
+      color(random(75, 255), random(75, 255), random(75, 255))
+    );
+    balls.push(b);
+  }
 }
 
 function draw() {
-  b.createBall();
+  balls.forEach((b) => {
+    b.createBall();
+    b.moveBall();
+  });
 }
